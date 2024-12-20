@@ -1,1 +1,0 @@
-# Gilyazov_tasks
