@@ -1,0 +1,15 @@
+@startuml
+start
+:**ввод** num;
+:sum = 0;
+:count = 0;
+while (num != 0) is(да)
+:ввод num;
+if (num >= 100 && num < 1000) then(да)
+:sum = sum + num;
+:count = count + 1;
+endif
+endwhile(нет)
+:**вывод** (count > 0 ? sum / count : "NO");
+stop
+@enduml

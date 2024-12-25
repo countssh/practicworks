@@ -1,0 +1,15 @@
+@startuml
+start
+:Ввод n;
+
+if (n >= 10 && n <= 99?) then (yes)
+  if (n / 10 == n % 10?) then (yes)
+    :Цифры одинаковые: Да;
+  else (no)
+    :Цифры одинаковые: Нет;
+  endif
+else (no)
+  :Ошибка: введите двузначное число;
+endif
+stop
+@enduml

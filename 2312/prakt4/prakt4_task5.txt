@@ -1,0 +1,31 @@
+@startuml
+start
+
+:Ввод n;
+
+if (n <= 1?) then (yes)
+    :N должно быть больше 1;
+    stop
+else (no)
+endif
+
+:k = 0;
+:sum = 0;
+
+while (true) is (yes)
+    :k++;
+    :sum += k;
+
+    if (sum > n?) then (yes)
+        :sum -= k;
+        :k--;
+        break
+    else (no)
+    endif
+endwhile
+
+:Вывод "Наибольшее K: " + k;
+:Вывод "Сумма 1 + 2 + ... + K: " + sum;
+
+stop
+@enduml

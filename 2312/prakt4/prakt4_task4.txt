@@ -1,0 +1,27 @@
+@startuml
+start
+
+:Ввод n;
+
+if (n <= 0?) then (yes)
+    :N должно быть положительным числом;
+    stop
+else (no)
+endif
+
+:k = 0;
+
+while (n > 1) is (yes)
+    if (n % 2 != 0?) then (yes)
+        :Введенное число не является степенью двойки;
+        stop
+    else (no)
+    endif
+    :n = n / 2;
+    :k = k + 1;
+endwhile
+
+:Вывод "K = " + k;
+
+stop
+@enduml

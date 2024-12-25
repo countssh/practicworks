@@ -1,0 +1,27 @@
+@startuml
+start
+:Ввод a, b, c;
+:PC = 0;
+:NC = 0;
+
+if (a > 0?) then (yes)
+  :PC = PC + 1;
+else if (a < 0?) then (yes)
+  :NC = NC + 1;
+endif
+
+if (b > 0?) then (yes)
+  :PC = PC + 1;
+else if (b < 0?) then (yes)
+  :NC = NC + 1;
+endif
+
+if (c > 0?) then (yes)
+  :PC = PC + 1;
+else if (c < 0?) then (yes)
+  :NC = NC + 1;
+endif
+
+:Вывод "Кол-во пол. чисел: " + PC + " Кол-во отр. чисел: " + NC;
+stop
+@enduml

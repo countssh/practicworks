@@ -1,0 +1,16 @@
+@startuml
+start
+:Ввод a, b, m;
+:x = a * b * b - sin(b * b) + m * b;
+
+if (x < -PI) then (yes)
+  :y = 1 - (exp(-a * x) + exp(-b * x));
+else if (x > PI) then (yes)
+  :y = 1 - exp(-a * x) * sin(a * x + b);
+else (no)
+  :y = 1 - exp(-a * x) * (a * x + b);
+endif
+
+:Вывод "y = " + y + " x = " + x;
+stop
+@enduml

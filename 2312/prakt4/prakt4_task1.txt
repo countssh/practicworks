@@ -1,0 +1,21 @@
+@startuml
+start
+:Ввод NN, AA, BB;
+
+switch (NN)
+case (1)
+:Результат: AA + BB;
+case (2)
+:Результат: AA - BB;
+case (3)
+:Результат: AA * BB;
+case (4)
+if (BB != 0) then (yes)
+:Результат: AA / BB;
+else (no)
+:Деление на ноль невозможно;
+endif
+endswitch
+
+stop
+@enduml

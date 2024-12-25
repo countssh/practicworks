@@ -1,0 +1,11 @@
+@startuml
+start
+:**ввод** pricePerKg;
+:weight = 1.2;
+while (weight <= 2.0) is(да)
+:totalCost = pricePerKg * weight;
+:вывод weight, totalCost;
+:weight = weight + 0.2;
+endwhile(нет)
+stop
+@enduml
