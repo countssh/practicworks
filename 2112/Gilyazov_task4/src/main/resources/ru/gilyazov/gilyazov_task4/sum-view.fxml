@@ -65,7 +65,7 @@
       </VBox>
    </left>
    <top>
-      <Label text="Введите вещественно число X и целое число N (&gt;0)" BorderPane.alignment="CENTER">
+      <Label text="Введите вещественное число X и целое число N (&gt;0)" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="200.0" top="10.0" />
          </BorderPane.margin>
