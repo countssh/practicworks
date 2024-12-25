@@ -25,28 +25,26 @@ public class SumController {
 
     @FXML
     void startButtonOnAction(ActionEvent event) {
-        try {
-            double pricePerKg = Double.parseDouble(aTextField.getText());
-            if (pricePerKg < 0) {
-                startButton.setText("Цена должна быть неотрицательной");
-                resultTextArea.clear();
-                return;
-            }
-
-            StringBuilder output = new StringBuilder();
-            DecimalFormat df = new DecimalFormat("0.00"); // Для форматирования до 2 знаков после запятой
-            double totalCost;
-
-            for (double weight = 1.2; weight <= 2.0; weight += 0.2) {
-                totalCost = pricePerKg * weight;
-                output.append("Стоимость ").append(df.format(weight)).append(" кг: ").append(df.format(totalCost)).append(" \n");
-            }
-            resultTextArea.setText(output.toString());
-
-        } catch (NumberFormatException e) {
-            startButton.setText("Введите корректное число");
-            resultTextArea.clear();
+    try {
+        double pricePerKg = Double.parseDouble(aTextField.getText());
+        if (pricePerKg < 0) {
+             startButton.setText("Цена должна быть неотрицательной");
+             resultTextArea.clear();
+             return;
         }
+
+        double weight = 1.2;
+        String result = "";
+
+        while (weight <= 2.0) {
+            double totalCost = pricePerKg * weight;
+            result += String.format("Стоимость %.1f кг: %.2f\n", weight, totalCost);
+            weight += 0.2;
+        }
+        resultTextArea.setText(result);
+
+    } catch (NumberFormatException e) {
+        startButton.setText("Введите корректное число");
+        resultTextArea.clear();
     }
 }
-
